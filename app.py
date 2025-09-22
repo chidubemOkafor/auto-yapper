@@ -66,3 +66,7 @@ if __name__ == '__main__':
     scheduler_thread.start()
     
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
+
+# Today's yap times: ['07:14', '08:36', '09:29', '11:51', '13:14', '17:47']
+# Today's reply times: ['13:21', '20:50']
