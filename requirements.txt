@@ -1,0 +1,6 @@
+dotenv
+openai
+tweepy
+supabase
+requests
+schedule

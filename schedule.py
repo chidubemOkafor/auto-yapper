@@ -5,7 +5,6 @@ import requests
 import time
 import os
 import random
-from datetime import datetime
 
 load_dotenv()
 

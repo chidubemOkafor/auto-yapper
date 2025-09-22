@@ -2,7 +2,6 @@ from main import client
 from model import data, cl, completion
 from get_popular_tweet import fetch_commentable_tweets
 from database import getTweetToComment, markSent, getOldTweet, setOldTweet
-import requests
 
 def create_reply():
     projTweet = getTweetToComment()
