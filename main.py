@@ -18,5 +18,3 @@ client = tweepy.Client(
     wait_on_rate_limit=True
 )
 
-response = client.create_tweet(text="Hello world via AutoYapper v2 🚀")
-print("Tweeted:", response.data)
