@@ -1,12 +1,23 @@
 from dotenv import load_dotenv
 from functions import create_reply, create_yap
+from flask import Flask
 import schedule
-import requests
+import threading
 import time
 import os
 import random
 
+app = Flask(__name__)
+
 load_dotenv()
+
+@app.route('/')
+def health():
+    return "Bot is running!"
+
+@app.route('/ping')
+def ping():
+    return "pong"
 
 def random_yap_times():
     num_tweets = random.randint(5, 7)
@@ -25,32 +36,33 @@ def random_reply_times():
         times.append(f"{hour:02d}:{minute:02d}")
     return sorted(times)
 
-def setup_daily_schedule():
-    schedule.clear()
-    
-    yap_times = random_yap_times()
-    reply_times = random_reply_times()
-    
-    print(f"Today's yap times: {yap_times}")
-    print(f"Today's reply times: {reply_times}")
-    
-    for time_str in yap_times:
-        schedule.every().day.at(time_str).do(create_yap)
-    
-    for time_str in reply_times:
-        schedule.every().day.at(time_str).do(create_reply)
-    
-    schedule.every().day.at("00:01").do(setup_daily_schedule)
+def run_scheduler():
+    def setup_daily_schedule():
+        schedule.clear()
+        
+        yap_times = random_yap_times()
+        reply_times = random_reply_times()
+        
+        print(f"Today's yap times: {yap_times}")
+        print(f"Today's reply times: {reply_times}")
+        
+        for time_str in yap_times:
+            schedule.every().day.at(time_str).do(create_yap)
+        
+        for time_str in reply_times:
+            schedule.every().day.at(time_str).do(create_reply)
+        
+        schedule.every().day.at("00:01").do(setup_daily_schedule)
 
-def keep_alive():
-    try:
-        requests.get(f"https://{os.getenv('RENDER_EXTERNAL_URL')}/ping")
-    except:
-        pass
+    setup_daily_schedule()
 
-setup_daily_schedule()
-schedule.every(10).minutes.do(keep_alive)
+    while True:
+        schedule.run_pending()
+        time.sleep(60)
 
-while True:
-    schedule.run_pending()
-    time.sleep(60)
+if __name__ == '__main__':
+    scheduler_thread = threading.Thread(target=run_scheduler)
+    scheduler_thread.daemon = True
+    scheduler_thread.start()
+    
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
