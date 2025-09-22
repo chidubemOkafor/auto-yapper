@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from functions import create_reply, create_yap
-import schedule
+import app
 import requests
 import time
 import os
@@ -26,7 +26,7 @@ def random_reply_times():
     return sorted(times)
 
 def setup_daily_schedule():
-    schedule.clear()
+    app.clear()
     
     yap_times = random_yap_times()
     reply_times = random_reply_times()
@@ -35,12 +35,12 @@ def setup_daily_schedule():
     print(f"Today's reply times: {reply_times}")
     
     for time_str in yap_times:
-        schedule.every().day.at(time_str).do(create_yap)
+        app.every().day.at(time_str).do(create_yap)
     
     for time_str in reply_times:
-        schedule.every().day.at(time_str).do(create_reply)
+        app.every().day.at(time_str).do(create_reply)
     
-    schedule.every().day.at("00:01").do(setup_daily_schedule)
+    app.every().day.at("00:01").do(setup_daily_schedule)
 
 def keep_alive():
     try:
@@ -49,8 +49,8 @@ def keep_alive():
         pass
 
 setup_daily_schedule()
-schedule.every(10).minutes.do(keep_alive)
+app.every(10).minutes.do(keep_alive)
 
 while True:
-    schedule.run_pending()
+    app.run_pending()
     time.sleep(60)
