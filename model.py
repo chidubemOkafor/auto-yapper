@@ -1,17 +1,9 @@
-import json
 from dotenv import load_dotenv
 import os
-from main import client
 from openai import OpenAI
 import datetime
 
 load_dotenv()
-
-url = os.getenv('GROQ_URL')
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": f"Bearer {os.getenv('GROQ_API_KEY')}"
-}
 
 cl = OpenAI(
     base_url="https://router.huggingface.co/v1",
