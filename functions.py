@@ -1,5 +1,5 @@
 from main import client
-from model import data, cl, completion
+from model import data, create_completion
 from get_popular_tweet import fetch_commentable_tweets
 from database import getTweetToComment, markSent, getOldTweet, setOldTweet
 
@@ -10,9 +10,9 @@ def create_reply():
         return
     tweet = projTweet["tweet"]
 
-    data["messages"].append({"role": "assistant", "content": f"generate a reply for this '{tweet}' and please make it short also add the project tags too"})
-    completion = cl.chat.completions.create(data)
+    data["messages"].append({"role": "assistant", "content": f"generate a reply for this '{tweet}' and please make it short also add the project tags too. and remeber it must be a direct reply response to the tweet nothing else"})
 
+    completion = create_completion(data["messages"])
     text = completion.choices[0].message
 
     comment = client.create_tweet(text=text.content, in_reply_to_tweet_id=projTweet["id"])
@@ -20,10 +20,7 @@ def create_reply():
         print("Error creating comment")
 
     markSent(tweet_id=projTweet["id"])
-
     print(f"Commented created: {comment.data}")
-    
-    return text
 
 def create_yap():
     prevYap = getOldTweet()
@@ -31,6 +28,8 @@ def create_yap():
         "role": "assistant",
         "content": f"This was your previous yap: '{prevYap}'. Don't repeat it. Make something new."
     })
+
+    completion = create_completion(data["messages"])
 
     text = completion.choices[0].message
     print("Generated:", text.content)
@@ -41,6 +40,4 @@ def create_yap():
     else: 
         print("Failed to create tweet.")
 
-
-create_reply()
 # source venv/bin/activate

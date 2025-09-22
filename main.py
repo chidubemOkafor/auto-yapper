@@ -17,4 +17,3 @@ client = tweepy.Client(
     access_token_secret=access_token_secret,
     wait_on_rate_limit=True
 )
-

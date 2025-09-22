@@ -29,7 +29,10 @@ data = {
     ]
 }
 
-completion = cl.chat.completions.create(
-    model="meta-llama/Llama-3.3-70B-Instruct:nebius",
-    messages=data["messages"]
-)
+def create_completion(messages):
+    completion = cl.chat.completions.create(
+        model="meta-llama/Llama-3.3-70B-Instruct:nebius",
+        messages=messages
+    )
+
+    return completion
