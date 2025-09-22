@@ -1,11 +1,13 @@
 from main import client
 from model import data, cl, completion
+from get_popular_tweet import fetch_commentable_tweets
 from database import getTweetToComment, markSent, getOldTweet, setOldTweet
 import requests
 
 def create_reply():
     projTweet = getTweetToComment()
     if projTweet is None:
+        fetch_commentable_tweets()
         return
     tweet = projTweet["tweet"]
 
@@ -41,4 +43,5 @@ def create_yap():
         print("Failed to create tweet.")
 
 
+create_reply()
 # source venv/bin/activate

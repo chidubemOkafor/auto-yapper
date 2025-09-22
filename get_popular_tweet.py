@@ -13,16 +13,23 @@ if not bearer_token:
 if not username:
     raise ValueError("ACCOUNT_USERNAME is missing in .env")
 
-client = tweepy.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
+def fetch_commentable_tweets():
+    try:
+        client = tweepy.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
 
-query = f"@{username} -is:retweet"
+        query = f"@{username} -is:retweet"
 
-tweets = client.search_recent_tweets(query=query, max_results=10)
+        tweets = client.search_recent_tweets(query=query, max_results=3)
 
-print(f"Latest tweets from @{username}:")
-print(tweets.data)
-for tweet in tweets.data:
-    setRetweetTweet(tweet.id, tweet.text)
-    print(f"Pushed tweet ID {tweet.id} to database")
+        if not tweets:
+            return
 
-print("Done fetching and storing tweets.")
+        print(f"Latest tweets from @{username}:")
+        print(tweets.data)
+        for tweet in tweets.data:
+            setRetweetTweet(tweet.id, tweet.text)
+            print(f"Pushed tweet ID {tweet.id} to database")
+
+        print("Done fetching and storing tweets.")
+    except Exception as e:
+        print(f"Error: {e}")
