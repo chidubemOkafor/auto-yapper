@@ -1,0 +1,122 @@
+2025-09-25 06:41:05,498 - INFO - Starting bot application...
+2025-09-25 06:41:05,499 - INFO - Testing functions...
+2025-09-25 06:41:05,499 - INFO - Testing create_yap...
+2025-09-25 06:41:05,499 - INFO - Starting yap creation...
+2025-09-25 06:41:12,800 - INFO - HTTP Request: GET https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history?select=%2A "HTTP/2 200 OK"
+2025-09-25 06:41:24,674 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 06:41:24,728 - ERROR - Error creating yap: Object of type ChatCompletionMessage is not JSON serializable
+2025-09-25 06:41:24,728 - INFO - create_yap test result: None
+2025-09-25 06:41:24,729 - INFO - Testing create_reply...
+2025-09-25 06:41:24,729 - INFO - Starting reply creation...
+2025-09-25 06:41:25,811 - INFO - HTTP Request: GET https://snujilijkjcebvkthpue.supabase.co/rest/v1/retweets?select=%2A&isComented=eq.False&limit=1 "HTTP/2 200 OK"
+2025-09-25 06:41:26,925 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 06:41:33,993 - INFO - HTTP Request: PATCH https://snujilijkjcebvkthpue.supabase.co/rest/v1/retweets?id=eq.1969357816126115849 "HTTP/2 200 OK"
+2025-09-25 06:41:33,996 - INFO - Reply created successfully: None
+2025-09-25 06:41:33,996 - INFO - create_reply test result: None
+2025-09-25 06:41:33,997 - INFO - Scheduler thread started
+2025-09-25 06:41:33,997 - INFO - Scheduler thread started
+2025-09-25 06:41:33,998 - INFO - Setting up schedule for 2025-09-25
+2025-09-25 06:41:34,003 - INFO - Starting Flask app on port 5000
+2025-09-25 06:41:34,004 - INFO - Today's yap times: ['15:23', '16:49', '18:04', '18:42', '20:12', '23:58']
+2025-09-25 06:41:34,004 - INFO - Today's reply times: ['09:10', '14:12']
+2025-09-25 06:41:34,006 - INFO - Scheduled yap at 15:23
+2025-09-25 06:41:34,006 - INFO - Scheduled yap at 16:49
+2025-09-25 06:41:34,007 - INFO - Scheduled yap at 18:04
+2025-09-25 06:41:34,007 - INFO - Scheduled yap at 18:42
+2025-09-25 06:41:34,008 - INFO - Scheduled yap at 20:12
+2025-09-25 06:41:34,008 - INFO - Scheduled yap at 23:58
+2025-09-25 06:41:34,008 - INFO - Scheduled reply at 09:10
+2025-09-25 06:41:34,009 - INFO - Scheduled reply at 14:12
+2025-09-25 06:41:34,009 - INFO - Total jobs scheduled: 8
+2025-09-25 06:41:34,009 - INFO - Starting scheduler loop...
+2025-09-25 06:41:34,031 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.242:5000
+2025-09-25 06:41:34,032 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-25 06:44:53,664 - INFO - 127.0.0.1 - - [25/Sep/2025 06:44:53] "GET / HTTP/1.1" 200 -
+2025-09-25 06:44:56,793 - INFO - 127.0.0.1 - - [25/Sep/2025 06:44:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-25 06:45:03,979 - INFO - Starting yap creation...
+2025-09-25 06:45:20,197 - INFO - HTTP Request: GET https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history?select=%2A "HTTP/2 200 OK"
+2025-09-25 06:45:26,177 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 06:45:26,195 - ERROR - Error creating yap: Object of type ChatCompletionMessage is not JSON serializable
+2025-09-25 06:45:26,196 - INFO - 127.0.0.1 - - [25/Sep/2025 06:45:26] "GET /test/yap HTTP/1.1" 200 -
+2025-09-25 06:50:32,117 - INFO - Starting yap creation...
+2025-09-25 06:50:43,769 - INFO - HTTP Request: GET https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history?select=%2A "HTTP/2 200 OK"
+2025-09-25 06:50:45,613 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 06:50:45,618 - ERROR - Error creating yap: Object of type ChatCompletionMessage is not JSON serializable
+2025-09-25 06:50:45,619 - INFO - 127.0.0.1 - - [25/Sep/2025 06:50:45] "GET /test/yap HTTP/1.1" 200 -
+2025-09-25 06:53:05,824 - INFO - Starting yap creation...
+2025-09-25 06:53:16,954 - INFO - HTTP Request: GET https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history?select=%2A "HTTP/2 200 OK"
+2025-09-25 06:53:18,661 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 06:53:18,668 - ERROR - Error creating yap: Object of type ChatCompletionMessage is not JSON serializable
+2025-09-25 06:53:18,670 - INFO - 127.0.0.1 - - [25/Sep/2025 06:53:18] "GET /test/yap HTTP/1.1" 200 -
+2025-09-25 06:57:15,588 - INFO - Starting bot application...
+2025-09-25 06:57:15,588 - INFO - Testing functions...
+2025-09-25 06:57:15,588 - INFO - Testing create_yap...
+2025-09-25 06:57:15,588 - INFO - Starting yap creation...
+2025-09-25 06:57:22,115 - INFO - HTTP Request: GET https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history?select=%2A "HTTP/2 200 OK"
+2025-09-25 06:57:31,603 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 06:57:33,912 - INFO - HTTP Request: DELETE https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history?id=neq.0 "HTTP/2 200 OK"
+2025-09-25 06:57:34,466 - INFO - HTTP Request: POST https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history "HTTP/2 201 Created"
+2025-09-25 06:57:34,469 - INFO - Yap created successfully: None
+2025-09-25 06:57:34,470 - INFO - create_yap test result: None
+2025-09-25 06:57:34,470 - INFO - Testing create_reply...
+2025-09-25 06:57:34,470 - INFO - Starting reply creation...
+2025-09-25 06:57:35,018 - INFO - HTTP Request: GET https://snujilijkjcebvkthpue.supabase.co/rest/v1/retweets?select=%2A&isComented=eq.False&limit=1 "HTTP/2 200 OK"
+2025-09-25 06:57:35,833 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 06:57:36,589 - INFO - HTTP Request: PATCH https://snujilijkjcebvkthpue.supabase.co/rest/v1/retweets?id=eq.1969357816352657608 "HTTP/2 200 OK"
+2025-09-25 06:57:36,592 - INFO - Reply created successfully: None
+2025-09-25 06:57:36,592 - INFO - create_reply test result: None
+2025-09-25 06:57:36,593 - INFO - Scheduler thread started
+2025-09-25 06:57:36,594 - INFO - Scheduler thread started
+2025-09-25 06:57:36,595 - INFO - Setting up schedule for 2025-09-25
+2025-09-25 06:57:36,599 - INFO - Starting Flask app on port 5000
+2025-09-25 06:57:36,600 - INFO - Today's yap times: ['14:04', '16:52', '17:32', '19:35', '20:34', '21:46', '22:43']
+2025-09-25 06:57:36,600 - INFO - Today's reply times: ['14:23', '15:06']
+2025-09-25 06:57:36,602 - INFO - Scheduled yap at 14:04
+2025-09-25 06:57:36,602 - INFO - Scheduled yap at 16:52
+2025-09-25 06:57:36,603 - INFO - Scheduled yap at 17:32
+2025-09-25 06:57:36,603 - INFO - Scheduled yap at 19:35
+2025-09-25 06:57:36,604 - INFO - Scheduled yap at 20:34
+2025-09-25 06:57:36,604 - INFO - Scheduled yap at 21:46
+2025-09-25 06:57:36,604 - INFO - Scheduled yap at 22:43
+2025-09-25 06:57:36,605 - INFO - Scheduled reply at 14:23
+2025-09-25 06:57:36,611 - INFO - Scheduled reply at 15:06
+2025-09-25 06:57:36,614 - INFO - Total jobs scheduled: 9
+2025-09-25 06:57:36,615 - INFO - Starting scheduler loop...
+2025-09-25 06:57:36,619 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.161.242:5000
+2025-09-25 06:57:36,619 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-25 06:57:36,950 - INFO - Starting yap creation...
+2025-09-25 06:57:37,258 - INFO - HTTP Request: GET https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history?select=%2A "HTTP/2 200 OK"
+2025-09-25 06:57:38,191 - INFO - HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 06:57:39,318 - INFO - HTTP Request: DELETE https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history?id=neq.0 "HTTP/2 200 OK"
+2025-09-25 06:57:40,034 - INFO - HTTP Request: POST https://snujilijkjcebvkthpue.supabase.co/rest/v1/tweet_history "HTTP/2 201 Created"
+2025-09-25 06:57:40,036 - INFO - Yap created successfully: None
+2025-09-25 06:57:40,038 - INFO - 127.0.0.1 - - [25/Sep/2025 06:57:40] "GET /test/yap HTTP/1.1" 200 -
+2025-09-25 07:00:06,622 - INFO - Scheduler running. 10 jobs scheduled.
+2025-09-25 07:00:06,622 - INFO -   - safe_create_yap next run: 2025-09-25 14:04:00
+2025-09-25 07:00:06,623 - INFO -   - safe_create_yap next run: 2025-09-25 16:52:00
+2025-09-25 07:00:06,623 - INFO -   - safe_create_yap next run: 2025-09-25 17:32:00
+2025-09-25 07:00:06,623 - INFO -   - safe_create_yap next run: 2025-09-25 19:35:00
+2025-09-25 07:00:06,623 - INFO -   - safe_create_yap next run: 2025-09-25 20:34:00
+2025-09-25 07:00:06,623 - INFO -   - safe_create_yap next run: 2025-09-25 21:46:00
+2025-09-25 07:00:06,624 - INFO -   - safe_create_yap next run: 2025-09-25 22:43:00
+2025-09-25 07:00:06,624 - INFO -   - safe_create_reply next run: 2025-09-25 14:23:00
+2025-09-25 07:00:06,624 - INFO -   - safe_create_reply next run: 2025-09-25 15:06:00
+2025-09-25 07:00:06,624 - INFO -   - setup_daily_schedule next run: 2025-09-26 00:01:00
+2025-09-25 07:03:05,398 - INFO - 127.0.0.1 - - [25/Sep/2025 07:03:05] "GET /schedule HTTP/1.1" 200 -
+2025-09-25 07:30:06,702 - INFO - Scheduler running. 10 jobs scheduled.
+2025-09-25 07:30:06,703 - INFO -   - safe_create_yap next run: 2025-09-25 14:04:00
+2025-09-25 07:30:06,703 - INFO -   - safe_create_yap next run: 2025-09-25 16:52:00
+2025-09-25 07:30:06,703 - INFO -   - safe_create_yap next run: 2025-09-25 17:32:00
+2025-09-25 07:30:06,704 - INFO -   - safe_create_yap next run: 2025-09-25 19:35:00
+2025-09-25 07:30:06,704 - INFO -   - safe_create_yap next run: 2025-09-25 20:34:00
+2025-09-25 07:30:06,704 - INFO -   - safe_create_yap next run: 2025-09-25 21:46:00
+2025-09-25 07:30:06,704 - INFO -   - safe_create_yap next run: 2025-09-25 22:43:00
+2025-09-25 07:30:06,705 - INFO -   - safe_create_reply next run: 2025-09-25 14:23:00
+2025-09-25 07:30:06,705 - INFO -   - safe_create_reply next run: 2025-09-25 15:06:00
+2025-09-25 07:30:06,705 - INFO -   - setup_daily_schedule next run: 2025-09-26 00:01:00
