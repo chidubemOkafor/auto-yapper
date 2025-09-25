@@ -30,6 +30,11 @@ def health():
 def ping():
     return "pong"
 
+@app.route('/logs')
+def get_logs():
+    with open("bot.log") as f:
+        return f"<pre>{f.read()}</pre>"
+
 @app.route('/schedule')
 def get_schedule():
     """Debug endpoint to see current schedule"""
@@ -154,7 +159,7 @@ def test_functions():
         
     except Exception as e:
         logger.error(f"Function test failed: {str(e)}")
-        
+
 if __name__ == '__main__':
     logger.info("Starting bot application...")
     

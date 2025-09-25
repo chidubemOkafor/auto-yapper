@@ -120,3 +120,14 @@
 2025-09-25 07:30:06,705 - INFO -   - safe_create_reply next run: 2025-09-25 14:23:00
 2025-09-25 07:30:06,705 - INFO -   - safe_create_reply next run: 2025-09-25 15:06:00
 2025-09-25 07:30:06,705 - INFO -   - setup_daily_schedule next run: 2025-09-26 00:01:00
+2025-09-25 08:00:06,790 - INFO - Scheduler running. 10 jobs scheduled.
+2025-09-25 08:00:06,791 - INFO -   - safe_create_yap next run: 2025-09-25 14:04:00
+2025-09-25 08:00:06,791 - INFO -   - safe_create_yap next run: 2025-09-25 16:52:00
+2025-09-25 08:00:06,792 - INFO -   - safe_create_yap next run: 2025-09-25 17:32:00
+2025-09-25 08:00:06,792 - INFO -   - safe_create_yap next run: 2025-09-25 19:35:00
+2025-09-25 08:00:06,792 - INFO -   - safe_create_yap next run: 2025-09-25 20:34:00
+2025-09-25 08:00:06,792 - INFO -   - safe_create_yap next run: 2025-09-25 21:46:00
+2025-09-25 08:00:06,793 - INFO -   - safe_create_yap next run: 2025-09-25 22:43:00
+2025-09-25 08:00:06,793 - INFO -   - safe_create_reply next run: 2025-09-25 14:23:00
+2025-09-25 08:00:06,793 - INFO -   - safe_create_reply next run: 2025-09-25 15:06:00
+2025-09-25 08:00:06,794 - INFO -   - setup_daily_schedule next run: 2025-09-26 00:01:00
